@@ -1,6 +1,6 @@
 Create git repository
 In terminal create directory to clone git repository
-Copy git repository ssh url
+Copy git repository using ssh url
 Clone git repository in directory(you should see master)
 
 
@@ -10,6 +10,10 @@ Open Atom
     Create index.html in src folder
 
 
+Add this meta tag in index.html for Responsive Design right above css link:
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 Create sass folder in src folder
   Create main.scss in sass folder
@@ -17,7 +21,7 @@ Create sass folder in src folder
     You should see style.css in src folder
   Now link index.html to style.css
     <link rel="stylesheet" href="./style.css" type="text/css">
-    
+
   Run sass watch in src directory: sass --watch sass/main.scss:style.css
 
   Note: Now add _body.scss to sass folder and add @import "body" (to add style)
@@ -70,3 +74,39 @@ Now you create a views folder in src
 
 At this point run server to view your site
   http-server in root
+
+
+INSTALLING GRUNT
+
+	Create a gruntfile.js in root directory
+	In terminal: root directory: npm install —save-dev grunt
+
+	Now go to grunt file.js
+		'use strict';
+
+	And follow file-setup setup
+
+	for each grunt plugin that you use you need to install
+
+
+
+	For example: for jshint
+		nam install —save-dev grunt-contrib-jshint
+
+
+	Now you new load each task
+
+Example:
+
+	 grunt.loadNpmTasks('grunt-contrib-jshint');
+  	grunt.loadNpmTasks('grunt-contrib-sass');
+  	grunt.loadNpmTasks('grunt-contrib-copy');
+  	grunt.loadNpmTasks('grunt-contrib-clean');
+  	grunt.loadNpmTasks('grunt-contrib-concat');
+  	grunt.loadNpmTasks('grunt-contrib-connect');
+  	grunt.loadNpmTasks('grunt-mocha');
+
+
+  grunt.registerTask('test', ['connect', 'mocha']);
+
+  grunt.registerTask('default', ['clean','sass','copy', 'concat']);
