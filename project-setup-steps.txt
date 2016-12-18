@@ -1,0 +1,65 @@
+Create git repository
+In terminal create directory to clone git repository
+Copy git repository ssh url
+Clone git repository in directory(you should see master)
+
+
+
+Open Atom
+  Create src folder
+    Create index.html in src folder
+
+
+
+Create sass folder in src folder
+  Create main.scss in sass folder
+  To install sass: In terminal: in src folder:  sass sass/main.scss:style.css
+    You should see style.css in src folder
+  Now link index.html to style.css
+    <link rel="stylesheet" href="./style.css" type="text/css">
+  Run sass watch in src directory: sass --watch/main.scss:style.css
+  Note: Now add _body.scss to sass folder and add @import "body" (to add style)
+
+
+Create normalize.css file in src folder
+  paste normalize.css file in it
+  link it index.html before style.css link
+    <link rel="stylesheet" href="./normalize.css" type="text/css">
+
+
+Add .gitignore file to repository folder
+  Include:
+    .sass-cache
+    node_modules
+
+
+
+Install package.json in repository folder or root directory
+  command to install: npm init
+  Minimize your Atom and come back, you will see: node_modules folder
+   Add node_modules to .gitignore file
+  Note: It allow us to install dependencies like: jquery, angular, etc.
+
+Now you can install jquery,angular
+  command to install:
+  npm install --save jquery
+  npm install --save angular
+
+  Make sure to add script tag of each dependency to index.html
+    example:
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+            angular-ui-router
+
+
+
+Now add .jshintrc filr in git folder
+    copy and paste jshint file
+
+
+
+Now create a js folder in src folder
+    Thats where all your controller.js and service.js will exist
+
+
+Now you crate a
