@@ -17,7 +17,9 @@ Create sass folder in src folder
     You should see style.css in src folder
   Now link index.html to style.css
     <link rel="stylesheet" href="./style.css" type="text/css">
-  Run sass watch in src directory: sass --watch/main.scss:style.css
+    
+  Run sass watch in src directory: sass --watch sass/main.scss:style.css
+
   Note: Now add _body.scss to sass folder and add @import "body" (to add style)
 
 
@@ -62,4 +64,9 @@ Now create a js folder in src folder
     Thats where all your controller.js and service.js will exist
 
 
-Now you crate a
+Now you create a views folder in src
+  This will hold all your something.template.html file-setup
+
+
+At this point run server to view your site
+  http-server in root
